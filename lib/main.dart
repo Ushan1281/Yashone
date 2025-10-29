@@ -8,6 +8,10 @@ import 'package:workmanager/workmanager.dart';
 import 'package:geolocator/geolocator.dart';
 import 'package:http/http.dart' as http;
 import 'package:webview_flutter/webview_flutter.dart';
+import 'package:webview_flutter_android/webview_flutter_android.dart';
+import 'package:webview_flutter_wkwebview/webview_flutter_wkwebview.dart';
+
+
 
 /// ====== CONFIG ======
 const String fetchBackground = "employeeLocationTask";
@@ -113,9 +117,11 @@ class _LoginPageState extends State<LoginPage> with WidgetsBindingObserver {
   void initState() {
     super.initState();
     WidgetsBinding.instance.addObserver(this);
-    // For iOS WebView compatibility
-    //if (Platform.isAndroid) WebView.platform = AndroidWebView();
+
+
   }
+
+
 
   @override
   void dispose() {
